@@ -1,0 +1,3 @@
+#!/bin/sh
+echo '<<<apparmor>>>'
+echo "$(aa-status --json)"

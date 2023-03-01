@@ -8,46 +8,46 @@ from cmk.gui.plugins.metrics import (
 )
 
 
-metric_info["apparmor_profiles_oaded"] = {
-    "title": _("Profiles loaded"),
-    "unit": "count",
-    "color": "11/a",
-}
-metric_info["apparmor_profiles_enforced"] = {
-    "title": _("Profiles enforced"),
-    "unit": "count",
-    "color": "21/a",
-}
 metric_info["apparmor_profiles_unconfined"] = {
     "title": _("Profiles unconfined"),
     "unit": "count",
-    "color": "31/a",
+    "color": "#04d3ec",
 }
 metric_info["apparmor_profiles_complaining"] = {
     "title": _("Profiles complaining"),
     "unit": "count",
-    "color": "41/a",
+    "color": "#00aeff",
+}
+metric_info["apparmor_profiles_enforced"] = {
+    "title": _("Profiles enforced"),
+    "unit": "count",
+    "color": "#007fff",
+}
+metric_info["apparmor_profiles_loaded"] = {
+    "title": _("Profiles loaded"),
+    "unit": "count",
+    "color": "#1929ff",
 }
 metric_info["apparmor_processes_enforced"] = {
     "title": _("Processes enforced"),
     "unit": "count",
-    "color": "51/a",
+    "color": "#6dd02b",
 }
 metric_info["apparmor_processes_unconfined"] = {
     "title": _("Processes unconfined"),
     "unit": "count",
-    "color": "61/a",
+    "color": "#41a317",
 }
 metric_info["apparmor_processes_complaining"] = {
     "title": _("Processes complaining"),
     "unit": "count",
-    "color": "71/a",
+    "color": "#117700",
 }
 
 graph_info["apparmor_profiles_combined"] = {
     "title": _("AppArmor profiles"),
     "metrics": [
-        ("apparmor_profiles_oaded", "line"),
+        ("apparmor_profiles_loaded", "line"),
         ("apparmor_profiles_enforced", "line"),
         ("apparmor_profiles_unconfined", "line"),
         ("apparmor_profiles_complaining", "line"),
@@ -62,4 +62,3 @@ graph_info["apparmor_processes_combined"] = {
         ("apparmor_processes_complaining", "line"),
     ],
 }
-

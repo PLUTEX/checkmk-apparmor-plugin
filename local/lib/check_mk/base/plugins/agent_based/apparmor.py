@@ -113,4 +113,3 @@ register.agent_section(
     name = "apparmor",
     parse_function = parse_apparmor,
 )
-
